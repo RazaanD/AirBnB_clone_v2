@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-"""Compress web static package
-"""
+'''
+fabric script to distribute an archive to web servers
+----NEEDS TO REVISIT SCRIPT
+'''
+
 import os
 from datetime import datetime
 from fabric.api import env, local, put, run, runs_once
 
 
-env.hosts = ['35.175.130.28', '54.237.116.180']
+env.hosts = ['18.205.38.219', '34.138.16.188']
 
 
 def do_deploy(archive_path):
@@ -62,4 +65,4 @@ def do_deploy(archive_path):
         success = True
     except Exception:
         success = False
-    return 
+    return success
